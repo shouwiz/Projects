@@ -83,6 +83,8 @@ All monetary and count features are `log1p`-transformed; `Recency` is left untra
 ---
 
 ## Choosing K
+<img width="566" height="393" alt="image" src="https://github.com/user-attachments/assets/7fca4d18-6afa-420f-b554-437bed7949ff" />
+<img width="545" height="393" alt="image" src="https://github.com/user-attachments/assets/569380dd-0e54-4c04-b693-027c39b0d301" /> 
 
 Two criteria were evaluated across K = 2 to 11: within-cluster sum of squares (elbow) and silhouette score.
 
@@ -231,6 +233,7 @@ Order counts are near-symmetric (skew 0.46, mean 5.0, max 17) while spending is 
 
 ## Model validation
 
+
 PCA on the six standardised features shows the structure is genuinely low-dimensional:
 
 | Component | Explained variance | Cumulative |
@@ -239,8 +242,11 @@ PCA on the six standardised features shows the structure is genuinely low-dimens
 | PC2 | 24.25% | 86.49% |
 | PC3 | 11.95% | **98.44%** |
 
-Three components capture 98.4% of total variance, meaning the six behavioural features are largely expressing three underlying dimensions — broadly a value axis, a basket-size axis and a recency axis.
+<img width="700" height="470" alt="image" src="https://github.com/user-attachments/assets/c8dd40b5-2b5e-42a6-8011-17a3cb3be2b5" />
 
+
+Three components capture 98.4% of total variance, meaning the six behavioural features are largely expressing three underlying dimensions — broadly a value axis, a basket-size axis and a recency axis.
+<img width="1189" height="790" alt="image" src="https://github.com/user-attachments/assets/1df72e78-c9ec-4fa6-aa07-58544d27a1de" />\\
 Plotted in 2D PCA space (86.5% of variance), the four clusters show clean Voronoi-style boundaries with limited overlap, confirming that the log transformation and scaling did the work required. Clusters 0, 1 and 3 are tightly packed and internally homogeneous; Cluster 2 is visibly more dispersed, consistent with it containing a mix of buyers united by high AOV but varied in category and cadence.
 
 ---
